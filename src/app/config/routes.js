@@ -9,11 +9,16 @@ githubStats.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
       })
       .state('repositories', {
         url: '/repositories',
-        templateUrl: '/src/app/components/repositories/index.html',
+        templateUrl: '/src/app/components/repositories/views/index.html',
         controller: 'repositoriesController',
         data: {
           requireLogin: true
         }
+      })
+      .state('repositoryShow', {
+        url: '/repository/:id',
+        templateUrl: '/src/app/components/repositories/views/show.html',
+        controller: 'repositoryShowController'
       });
   }
 ]);

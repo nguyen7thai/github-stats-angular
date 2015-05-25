@@ -9,8 +9,8 @@ module.exports = function(grunt) {
       },
       js: {
         src: [
-          'src/app/app.js',
-          'src/app/**/*.js'
+          'app/app.js',
+          'app/**/*.js'
         ],
         dest: 'build/production.js',
       }
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ['src/*.js', 'src/**/*.js'],
+        files: ['app/*.js', 'app/**/*.js'],
         tasks: ['concat'],
         options: {
           spawn: false,
@@ -36,6 +36,14 @@ module.exports = function(grunt) {
         cwd: '',
         dependencies: true
       }
+    },
+
+    bower: {
+      install: {
+        options: {
+          targetDir: 'build/bower_components'
+        }
+      }
     }
   });
 
@@ -43,6 +51,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-install');
+  grunt.loadNpmTasks('grunt-bower-task');
 
   grunt.registerTask('default', ['concat', 'watch']);
 

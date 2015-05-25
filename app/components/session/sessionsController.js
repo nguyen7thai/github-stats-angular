@@ -1,4 +1,4 @@
-githubStats.controller('sessionsController',
+sessionModule.controller('sessionsController',
  ['$scope', '$location', 'sessionsResource', 'SessionService', function($scope, $location, Session, SessionService) {
   $scope.session = {
     username: '',

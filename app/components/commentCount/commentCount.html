@@ -1,0 +1,36 @@
+<div class="search-form">
+  <h3>Search form</h3>
+  <form ng-submit='search()'>
+    <p>
+      <label>Query From Date:</label>
+    </p>
+    <p>
+      <input type='date' ng-model='searchForm.from_date'/>
+    </p>
+    <p>
+      <label>aQuang's list</label>
+    </p>
+    <p>
+      <textarea ng-model='searchForm.people_list'></textarea>
+    </p>
+    <p>
+      <input type='submit' value='Search'/>
+    </p>
+  </form>
+</div>
+
+<div class="results">
+  <h3> Comment Count </h3>
+  <ol>
+    <li ng-repeat='count in comment_analytics'>
+      {{ count[0] }} - {{ count[1] }}
+    </li>
+  </ol>
+
+  <h3> No Comment </h3>
+  <ol>
+    <li ng-repeat='count in nocomment_people'>
+      {{ count }}
+    </li>
+  </ol>
+</div>

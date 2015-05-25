@@ -4,12 +4,12 @@ githubStats.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     $stateProvider
       .state('login', {
         url: '/',
-        templateUrl: '/app/components/sessions/new.html',
+        templateUrl: '/app/components/session/new.html',
         controller: 'sessionsController'
       })
       .state('repositories', {
         url: '/repositories',
-        templateUrl: '/app/components/repositories/views/index.html',
+        templateUrl: '/app/components/repository/views/index.html',
         controller: 'repositoriesController',
         data: {
           requireLogin: true
@@ -17,8 +17,13 @@ githubStats.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
       })
       .state('repositoryShow', {
         url: '/repository/:id',
-        templateUrl: '/app/components/repositories/views/show.html',
+        templateUrl: '/app/components/repository/views/show.html',
         controller: 'repositoryShowController'
+      })
+      .state('commentCount', {
+        url: '/comment_count',
+        templateUrl: '/app/components/commentCount/commentCount.html',
+        controller: 'commentCountController'
       });
   }
 ]);

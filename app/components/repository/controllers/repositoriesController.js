@@ -1,4 +1,4 @@
-githubStats.controller('repositoriesController',
+repositoryModule.controller('repositoriesController',
   ['$scope', 'repositoriesResource', function($scope, Repository) {
     var init = function() {
       Repository.query(function(data) {

@@ -4,6 +4,7 @@ var githubStats = angular.module('githubStats',
     'ngRoute',
     'ngResource',
     'ui.router',
+    'angularMoment',
     'session',
     'repository',
     'commentCount'

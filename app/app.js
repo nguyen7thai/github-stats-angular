@@ -1,4 +1,4 @@
-var API_SERVER = 'http://localhost:3000/api/v1/'
+var API_SERVER = 'http://gistats.eastruby.com/api/v1/'
 var githubStats = angular.module('githubStats',
   [
     'ngRoute',

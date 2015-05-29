@@ -4,8 +4,7 @@ githubStats.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     $stateProvider
       .state('login', {
         url: '/',
-        templateUrl: '/app/components/session/new.html',
-        controller: 'sessionsController'
+        templateUrl: '/app/components/githubAuthorization/login.html'
       })
       .state('repositories', {
         url: '/repositories',
@@ -18,12 +17,22 @@ githubStats.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
       .state('repositoryShow', {
         url: '/repository/:id',
         templateUrl: '/app/components/repository/views/show.html',
-        controller: 'repositoryShowController'
+        controller: 'repositoryShowController',
+        data: {
+          requireLogin: true
+        }
       })
       .state('commentCount', {
         url: '/comment_count',
         templateUrl: '/app/components/commentCount/commentCount.html',
-        controller: 'commentCountController'
+        controller: 'commentCountController',
+        data: {
+          requireLogin: true
+        }
+      })
+      .state('githubCallback', {
+        url: '/github_callback',
+        controller: 'githubAuthorizationController'
       });
   }
 ]);

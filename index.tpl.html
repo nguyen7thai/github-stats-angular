@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="en" ng-app='githubStats'>
+  <head>
+    <base href="/">
+    <!-- build:css vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.) application.css -->
+    <!-- include: "type": "css", "files": ".tmp/app/assets/css/*.css" -->
+    <!-- endbuild -->
+    <title>Github Stats</title>
+
+  </head>
+
+  <body>
+    <div class="header">Logo - GitStats</div>
+    <div class="navigation">Navigations</div>
+    <div ui-view></div>
+  </body>
+
+  <!-- build:js(.) vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js(.) application.js -->
+  <!-- include: "type": "js", "files": "app/*.js" -->
+  <!-- include: "type": "js", "files": "app/**/module.js" -->
+  <!-- include: "type": "js", "files": "app/config/*.js" -->
+  <!-- include: "type": "js", "files": "app/shared/**/*.js" -->
+  <!-- include: "type": "js", "files": "app/components/**/*js" -->
+  <!-- endbuild -->
+</html>
